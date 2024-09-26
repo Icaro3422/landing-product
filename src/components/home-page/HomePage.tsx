@@ -29,11 +29,8 @@ export const HomePage = () => {
                 Revoluciona tu closet con nuestro Colgador Mágico
               </h1>
               <h2 className="mt-4 text-xl text-gray-600">
-                ¡Organizate con estilo con este práctico organizador de
-                pantalones! Este gancho ahorrador de espacio te ayudará a
-                mantener tus pantalones ordenados y listos para usar. Olvídate
-                de desorden y disfruta de una experiencia de organización
-                sencilla y detallada.
+                Este gancho ahorrador de espacio te ayudará a mantener tus
+                pantalones ordenados y listos para usar.
               </h2>
             </div>
           </section>
