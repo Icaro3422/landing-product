@@ -29,8 +29,7 @@ export const HomePage = () => {
                 Revoluciona tu closet con nuestro Colgador Mágico
               </h1>
               <h2 className="mt-4 text-xl text-gray-600">
-                Este gancho ahorrador de espacio te ayudará a mantener tus
-                pantalones ordenados y listos para usar.
+                Gancho ahorrador de espacio para mantener tus pantalones ordenados
               </h2>
             </div>
           </section>
@@ -77,6 +76,16 @@ export const HomePage = () => {
                 </span>
               </li>
             </ul>
+            <div className="text-center mt-12">
+              <a
+                className="bg-yellow-500 rounded-full  text-black text-2xl font-bold py-4 px-8 cursor-pointer"
+                href="https://gohome.com.co/products/gancho-para-pantalones"
+                rel="noopener noreferrer"
+                target="__self"
+              >
+                Comprar ahora
+              </a>
+            </div>
           </section>
           <section className="w-full py-12 md:py-24 lg:py-32">
             <h3 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
@@ -140,9 +149,7 @@ export const HomePage = () => {
               </li>
               <li className="flex items-center space-x-2">
                 <span className="icon-[feather--check-circle] text-mainGreen"></span>
-                <span>
-                  Capacidad para colgar hasta 8 prendas en cada gancho
-                </span>
+                <span>Capacidad para colgar hasta 5 prendas</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span className="icon-[feather--check-circle] text-mainGreen"></span>
@@ -166,12 +173,17 @@ export const HomePage = () => {
                 ¿Listo para transformar
                 <br /> tu closet?
               </h3>
-              <p className="text-xl mb-8">
+              <p className="text-xl mb-12">
                 Ordena ahora y recibe un 20% de descuento en tu primera compra
               </p>
-              <button className="bg-yellow-500 rounded-full  text-black text-2xl font-bold py-4 px-8">
+              <a
+                className="bg-yellow-500 rounded-full  text-black text-2xl font-bold py-4 px-8 cursor-pointer"
+                href="https://gohome.com.co/products/gancho-para-pantalones"
+                rel="noopener noreferrer"
+                target="__self"
+              >
                 Comprar ahora
-              </button>
+              </a>
             </div>
           </section>
         </div>
