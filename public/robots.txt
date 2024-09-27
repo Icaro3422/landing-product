@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oferta.gohome.com.co/landing-product.xml
