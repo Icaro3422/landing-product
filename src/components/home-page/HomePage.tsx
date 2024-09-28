@@ -2,14 +2,15 @@
 
 import Image from "next/image";
 import logo from "../../../public/assets/LOGO_PNG_COLOR.webp";
-import user1 from "../../../public/assets/user1.png";
-import user2 from "../../../public/assets/user2.png";
-import user3 from "../../../public/assets/user3.png";
+import user1 from "../../../public/assets/user5.png";
+import user2 from "../../../public/assets/user6.png";
+import user3 from "../../../public/assets/user7.png";
 
 import ganchos1 from "../../../public/assets/ganchos1.webp";
 import ganchos2 from "../../../public/assets/ganchos2.webp";
 import ganchos3 from "../../../public/assets/ganchos3.webp";
 import ganchos4 from "../../../public/assets/ganchos4.webp";
+import { EvidenceGrid } from "../evidence-grid/EvidenceGrid";
 
 const images = [ganchos1, ganchos2, ganchos3, ganchos4];
 
@@ -167,6 +168,7 @@ export const HomePage = () => {
               </li>
             </ul>
           </section>
+          <EvidenceGrid />
           <section className="w-full py-12 md:py-24 lg:py-32">
             <div className="text-center">
               <h3 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
