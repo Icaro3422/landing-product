@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -37,6 +37,7 @@ export default function RootLayout({
     <html lang="es">
       <GoogleTagManager gtmId="GTM-KNRWLTHD" />
       <body className={`${montserrat.variable} antialiased`}>{children}</body>
+      <GoogleAnalytics gaId="G-Z60N5S38E6" />
     </html>
   );
 }
