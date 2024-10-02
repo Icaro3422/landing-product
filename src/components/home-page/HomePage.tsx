@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { sendGAEvent } from "@next/third-parties/google";
 import logo from "../../../public/assets/LOGO_PNG_COLOR.webp";
 import user1 from "../../../public/assets/user5.png";
 import user2 from "../../../public/assets/user6.png";
@@ -85,9 +84,6 @@ export const HomePage = () => {
                 href="https://gohome.com.co/products/gancho-para-pantalones"
                 rel="noopener noreferrer"
                 target="__self"
-                onClick={() =>
-                  sendGAEvent({ event: "buyButtonClicked", value: "1" })
-                }
               >
                 Comprar ahora
               </a>
@@ -202,9 +198,6 @@ export const HomePage = () => {
                 href="https://gohome.com.co/products/gancho-para-pantalones"
                 rel="noopener noreferrer"
                 target="__self"
-                onClick={() =>
-                  sendGAEvent({ event: "buyButtonClicked", value: "2" })
-                }
               >
                 Comprar ahora
               </a>
