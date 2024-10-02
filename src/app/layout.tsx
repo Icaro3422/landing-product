@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <GoogleTagManager gtmId="G-Z60N5S38E6" />
+      <GoogleTagManager gtmId="GTM-KNRWLTHD" />
       <body className={`${montserrat.variable} antialiased`}>{children}</body>
     </html>
   );
