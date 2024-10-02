@@ -30,7 +30,8 @@ export const HomePage = () => {
                 Revoluciona tu closet con nuestro Colgador Mágico
               </h1>
               <h2 className="mt-4 text-xl text-gray-600">
-                Gancho ahorrador de espacio para mantener tus pantalones ordenados
+                Gancho ahorrador de espacio para mantener tus pantalones
+                ordenados
               </h2>
             </div>
           </section>
@@ -171,12 +172,26 @@ export const HomePage = () => {
           <EvidenceGrid />
           <section className="w-full py-12 md:py-24 lg:py-32">
             <div className="text-center">
+              <p>
+                Antes{" "}
+                <span className="text-2xl text-gray-500 line-through font-semibold">
+                  $34.900
+                </span>
+                COP
+              </p>
+              <p className="text-sm text-green-600 font-medium">
+                Ahora{" "}
+                <span className="text-5xl text-green-600 font-bold">
+                  $19.900
+                </span>
+                COP
+              </p>
               <h3 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                 ¿Listo para transformar
                 <br /> tu closet?
               </h3>
               <p className="text-xl mb-12">
-                Ordena ahora y recibe un 20% de descuento en tu primera compra
+                Ordena ahora y recibe en las próximas 48 horas
               </p>
               <a
                 className="bg-yellow-500 rounded-full  text-black text-2xl font-bold py-4 px-8 cursor-pointer"
