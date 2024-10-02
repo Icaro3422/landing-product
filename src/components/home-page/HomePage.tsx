@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { sendGTMEvent } from "@next/third-parties/google";
+import { sendGAEvent } from "@next/third-parties/google";
 import logo from "../../../public/assets/LOGO_PNG_COLOR.webp";
 import user1 from "../../../public/assets/user5.png";
 import user2 from "../../../public/assets/user6.png";
@@ -86,7 +86,7 @@ export const HomePage = () => {
                 rel="noopener noreferrer"
                 target="__self"
                 onClick={() =>
-                  sendGTMEvent({ event: "buyButtonClicked", value: "1" })
+                  sendGAEvent({ event: "buyButtonClicked", value: "1" })
                 }
               >
                 Comprar ahora
@@ -203,7 +203,7 @@ export const HomePage = () => {
                 rel="noopener noreferrer"
                 target="__self"
                 onClick={() =>
-                  sendGTMEvent({ event: "buyButtonClicked", value: "2" })
+                  sendGAEvent({ event: "buyButtonClicked", value: "2" })
                 }
               >
                 Comprar ahora
