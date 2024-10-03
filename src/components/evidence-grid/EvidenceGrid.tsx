@@ -1,11 +1,10 @@
 import Image from "next/image";
 
-import picture1 from "../../../public/assets/evidencia1.webp";
-import picture2 from "../../../public/assets/evidencia2.webp";
-import picture3 from "../../../public/assets/evidencia3.webp";
-import user4 from "../../../public/assets/user4.png";
-
-const images = [picture1, picture2, picture3];
+const images = [
+  "/assets/evidencia1.webp",
+  "/assets/evidencia2.webp",
+  "/assets/evidencia3.webp",
+];
 
 export const EvidenceGrid = () => {
   return (
@@ -18,8 +17,13 @@ export const EvidenceGrid = () => {
           >
             <Image
               src={src}
-              alt={`Image ${index + 1}`}
+              alt={`Experiencia del cliente usando el Colgador Mágico ${
+                index + 1
+              }`}
               className="rounded-lg object-cover"
+              fill
+              sizes="(max-width: 640px) 50vw, 33vw"
+              loading="lazy"
             />
           </div>
         ))}
@@ -29,36 +33,43 @@ export const EvidenceGrid = () => {
           className="w-full h-full object-cover rounded-b-xl"
           controls
           muted
+          preload="metadata"
         >
           <source src="/assets/evidencia4.mp4" type="video/mp4" />
           Tu navegador no soporta archivos mp4.
         </video>
       </div>
       <div className="bg-white p-4 mt-6">
-        <p className="mb-2">
-          En GoHome encontré la posibilidad de ordenar mi closet con eficiencia,
-          este gancho para pantalones es una nota. Aquí les dejo el unboxing que
-          hice de este gran producto.
-        </p>
-        <div className="flex items-center space-x-2">
-          <div className="rounded-full overflow-hidden">
-            <Image
-              src={user4}
-              alt="1"
-              width={64}
-              height={64}
-              className="object-cover w-full h-full"
-            />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-semibold text-2xl">Esteban Muñoz</span>
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <span key={i} className="icon-[noto--star]"></span>
-              ))}
+        <blockquote>
+          <p className="mb-2">
+            En GoHome encontré la posibilidad de ordenar mi closet con
+            eficiencia, este gancho para pantalones es una nota. Aquí les dejo
+            el unboxing que hice de este gran producto.
+          </p>
+          <footer className="flex items-center space-x-2">
+            <div className="rounded-full overflow-hidden">
+              <Image
+                src="/assets/user4.png"
+                alt="Foto de perfil de Esteban Muñoz"
+                width={64}
+                height={64}
+                className="object-cover w-full h-full"
+              />
             </div>
-          </div>
-        </div>
+            <div className="flex flex-col">
+              <span className="font-semibold text-2xl">Esteban Muñoz</span>
+              <div className="flex" aria-label="Calificación de 5 estrellas">
+                {[...Array(5)].map((_, i) => (
+                  <span
+                    key={i}
+                    className="icon-[noto--star]"
+                    aria-hidden="true"
+                  ></span>
+                ))}
+              </div>
+            </div>
+          </footer>
+        </blockquote>
       </div>
     </section>
   );

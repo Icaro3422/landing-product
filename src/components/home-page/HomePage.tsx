@@ -19,7 +19,7 @@ export const HomePage = () => {
     <div className="flex flex-col min-h-screen">
       <header className="py-6 px-4 lg:px-6 flex items-center justify-center bg-mainGreen">
         <div className="relative">
-          <Image src={logo} alt="Go home logo" className="w-36" />
+          <Image src={logo} alt="Go home logo" className="w-36" width={144} height={36} />
         </div>
       </header>
       <main className="flex-1">
@@ -37,7 +37,7 @@ export const HomePage = () => {
           </section>
           <section className="w-full py-12">
             <div className="aspect-video relative">
-              <video className="w-full h-full object-cover" controls>
+              <video className="w-full h-full object-cover" controls preload="metadata">
                 <source src="/assets/ganchos-horizontal.mp4" type="video/mp4" />
                 Tu navegador no soporta archivos mp4.
               </video>
@@ -49,6 +49,7 @@ export const HomePage = () => {
                     src={src}
                     alt={`Image ${index + 1}`}
                     className="rounded-lg object-cover"
+                    fill
                   />
                 </div>
               ))}
