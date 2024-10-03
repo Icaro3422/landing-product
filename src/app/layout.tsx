@@ -16,6 +16,12 @@ export const metadata: Metadata = {
     "perchero organizador de ropa",
     "closet armable",
     "organizador de ropa plástico",
+    "Pagos contraentrega",
+    "Productos para hogar",
+    "Pantalones",
+    "Jeans",
+    "Armarios",
+    "gohome"
   ],
   robots: "index, follow",
   alternates: {

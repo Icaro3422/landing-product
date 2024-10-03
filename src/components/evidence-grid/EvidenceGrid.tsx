@@ -1,33 +1,7 @@
 import Image from "next/image";
-
-const images = [
-  "/assets/evidencia1.webp",
-  "/assets/evidencia2.webp",
-  "/assets/evidencia3.webp",
-];
-
 export const EvidenceGrid = () => {
   return (
     <section className="w-full py-12">
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6">
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className="w-full h-40 sm:h-64 relative overflow-hidden"
-          >
-            <Image
-              src={src}
-              alt={`Experiencia del cliente usando el Colgador Mágico ${
-                index + 1
-              }`}
-              className="rounded-lg object-cover"
-              fill
-              sizes="(max-width: 640px) 50vw, 33vw"
-              loading="lazy"
-            />
-          </div>
-        ))}
-      </div>
       <div className="aspect-video relative rounded-xl mt-4">
         <video
           className="w-full h-full object-cover rounded-b-xl"

@@ -19,7 +19,13 @@ export const HomePage = () => {
     <div className="flex flex-col min-h-screen">
       <header className="py-6 px-4 lg:px-6 flex items-center justify-center bg-mainGreen">
         <div className="relative">
-          <Image src={logo} alt="Go home logo" className="w-36" width={144} height={36} />
+          <Image
+            src={logo}
+            alt="Go home logo"
+            className="w-36"
+            width={144}
+            height={36}
+          />
         </div>
       </header>
       <main className="flex-1">
@@ -37,7 +43,11 @@ export const HomePage = () => {
           </section>
           <section className="w-full py-12">
             <div className="aspect-video relative">
-              <video className="w-full h-full object-cover" controls preload="metadata">
+              <video
+                className="w-full h-full object-cover"
+                controls
+                preload="metadata"
+              >
                 <source src="/assets/ganchos-horizontal.mp4" type="video/mp4" />
                 Tu navegador no soporta archivos mp4.
               </video>
@@ -81,12 +91,13 @@ export const HomePage = () => {
             </ul>
             <div className="text-center mt-12">
               <a
-                className="bg-yellow-500 rounded-full  text-black text-2xl font-bold py-4 px-8 cursor-pointer"
                 href="https://gohome.com.co/products/gancho-para-pantalones"
                 rel="noopener noreferrer"
                 target="__self"
               >
-                Comprar ahora
+                <button className="bg-yellow-500 rounded-full  text-black text-2xl font-bold py-4 px-8 cursor-pointer">
+                  Ordena ahora, paga contraentrega
+                </button>
               </a>
             </div>
           </section>
@@ -100,26 +111,44 @@ export const HomePage = () => {
                   user: user1,
                   stars: 5,
                   name: "María García",
+                  src: "/assets/evidencia1.webp",
                   comment:
-                    "¡Increíble! Ha transformado completamente mi armario.",
+                    "uff! Me encantó la atención y lo rápido que llegó mi pedido. Ahora si podré ordenar mi closet. Muchas gracias GoHome",
                 },
                 {
                   user: user2,
                   stars: 4,
                   name: "Juan Pérez",
+                  src: "/assets/evidencia3.webp",
                   comment:
-                    "Nunca pensé que podría tener tanto espacio en mi closet.",
+                    "GoHome, qué nota de producto. Ahora si mi esposa no me regañará por tener los pantalones tirados.",
                 },
                 {
                   user: user3,
                   stars: 5,
                   name: "Ana Martínez",
+                  src: "/assets/evidencia2.webp",
                   comment:
-                    "Fácil de instalar y muy resistente. ¡Lo recomiendo!",
+                    "No me considero buena armando nadaaaa, pero con este producto la rompieron. Lo logré súper fácil.",
                 },
               ].map((testimonial, index) => (
                 <div key={index} className="bg-white p-4 rounded-lg shadow">
-                  <p className="mb-2">{testimonial.comment}</p>
+                  <div
+                    key={index}
+                    className="w-full h-40 sm:h-64 relative overflow-hidden"
+                  >
+                    <Image
+                      src={testimonial.src}
+                      alt={`Experiencia del cliente usando el Colgador Mágico ${
+                        index + 1
+                      }`}
+                      className="rounded-lg object-cover"
+                      fill
+                      sizes="(max-width: 640px) 50vw, 33vw"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="mb-2 mt-4">{testimonial.comment}</p>
                   <div className="flex items-center space-x-2">
                     <div className="rounded-full overflow-hidden">
                       <Image
@@ -140,37 +169,45 @@ export const HomePage = () => {
                 </div>
               ))}
             </div>
+            <EvidenceGrid />
           </section>
           <h3 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
             Es elegido por:
           </h3>
-          <section className="w-full mt-6 py-8 md:py-24 bg-accentShadow rounded-xl">
+          <section className="w-full mt-6 py-8 md:py-24 bg-green-600 rounded-xl">
             <ul className="pl-6 space-y-2 max-w-2xl mx-auto">
               <li className="flex items-center space-x-2">
-                <span className="icon-[feather--check-circle] text-mainGreen"></span>
-                <span>Fabricado con plástico ABS de alta resistencia</span>
+                <span className="icon-[feather--check-circle] text-white"></span>
+                <span className="text-lg font-medium">
+                  Fabricado con plástico ABS de alta resistencia
+                </span>
               </li>
               <li className="flex items-center space-x-2">
-                <span className="icon-[feather--check-circle] text-mainGreen"></span>
-                <span>Capacidad para colgar hasta 5 prendas</span>
+                <span className="icon-[feather--check-circle] text-white"></span>
+                <span className="text-lg font-medium">
+                  Capacidad para colgar hasta 5 prendas
+                </span>
               </li>
               <li className="flex items-center space-x-2">
-                <span className="icon-[feather--check-circle] text-mainGreen"></span>
-                <span>Sistema de rotación de 360 grados para fácil acceso</span>
+                <span className="icon-[feather--check-circle] text-white"></span>
+                <span className="text-lg font-medium">
+                  Sistema de rotación de 360 grados para fácil acceso
+                </span>
               </li>
               <li className="flex items-center space-x-2">
-                <span className="icon-[feather--check-circle] text-mainGreen"></span>
-                <span>
+                <span className="icon-[feather--check-circle] text-white"></span>
+                <span className="text-lg font-medium">
                   Diseño plegable para ahorrar espacio cuando no está en uso
                 </span>
               </li>
               <li className="flex items-center space-x-2">
-                <span className="icon-[feather--check-circle] text-mainGreen"></span>
-                <span>Compatible con la mayoría de los closets estándar</span>
+                <span className="icon-[feather--check-circle] text-white"></span>
+                <span className="text-lg font-medium">
+                  Compatible con la mayoría de los closets estándar
+                </span>
               </li>
             </ul>
           </section>
-          <EvidenceGrid />
           <section className="w-full py-12 md:py-24 lg:py-32">
             <div className="text-center">
               <p>
@@ -195,12 +232,13 @@ export const HomePage = () => {
                 Ordena ahora y recibe en las próximas 48 horas
               </p>
               <a
-                className="bg-yellow-500 rounded-full  text-black text-2xl font-bold py-4 px-8 cursor-pointer"
                 href="https://gohome.com.co/products/gancho-para-pantalones"
                 rel="noopener noreferrer"
                 target="__self"
               >
-                Comprar ahora
+                <button className="bg-yellow-500 rounded-full  text-black text-2xl font-bold py-4 px-8 cursor-pointer">
+                  Ordena ahora, paga contraentrega
+                </button>
               </a>
             </div>
           </section>
