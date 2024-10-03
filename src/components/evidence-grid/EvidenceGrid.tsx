@@ -27,7 +27,7 @@ export const EvidenceGrid = () => {
       <div className="aspect-video relative rounded-xl mt-4">
         <video
           className="w-full h-full object-cover rounded-b-xl"
-          autoPlay
+          controls
           muted
         >
           <source src="/assets/evidencia4.mp4" type="video/mp4" />
