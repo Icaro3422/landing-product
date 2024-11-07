@@ -11,6 +11,7 @@
   "dependencies": {
     "@iconify/json": "^2.2.252",
     "@next/third-parties": "^14.2.14",
+    "@nextui-org/react": "^2.4.8",
     "@shopify/storefront-api-client": "^1.0.3",
     "graphql-tag": "^2.12.6",
     "next": "14.2.13",

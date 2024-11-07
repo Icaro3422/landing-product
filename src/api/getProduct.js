@@ -1,4 +1,4 @@
-import shopifyFetch from "./shopify";
+import shopifyFetch from "./shopifyFetch";
 
 const getProduct = async (id) => {
   return shopifyFetch({
@@ -21,6 +21,7 @@ const getProduct = async (id) => {
      }
    }
  `,
+ variables: { id }
 });
 };
 
