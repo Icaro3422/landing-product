@@ -13,8 +13,25 @@ import ganchos4 from "../../../public/assets/ganchos4.webp";
 import { EvidenceGrid } from "../evidence-grid/EvidenceGrid";
 
 const images = [ganchos1, ganchos2, ganchos3, ganchos4];
+import getProduct from "../../api/getProduct";
+import { useEffect, useState } from "react";
 
 export const HomePage = () => {
+
+  const [product, setProduct] = useState();
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const result = await getProduct(process.env.PRODUCT_ID);
+      setProduct(result);
+    }
+    fetchProduct();
+  }, []);
+
+  const handleClick = async () => {
+    
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="py-6 px-4 lg:px-6 flex items-center justify-center bg-mainGreen">
@@ -65,6 +82,10 @@ export const HomePage = () => {
               ))}
             </div>
           </section>
+            <div className="w-full h-[300px] bg-black py-10 ">
+              <h1>{product}</h1>
+              <button onClick={handleClick}></button>
+            </div>
           <section className="w-full py-12 md:py-24 lg:py-32">
             <h3 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
               Beneficios
